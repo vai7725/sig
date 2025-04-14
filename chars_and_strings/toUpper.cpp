@@ -34,6 +34,18 @@ void toLower(char word[], int n)
     }
 }
 
+void reverse(char word[], int n)
+{
+    int st = 0, end = n - 1;
+
+    while (st < end)
+    {
+        swap(word[st], word[end]);
+        st++;
+        end--;
+    }
+}
+
 int main()
 {
     char str[] = "VaIbhAv";
@@ -43,6 +55,9 @@ int main()
     cout << str << endl;
 
     toLower(str, 7);
+    cout << str << endl;
+
+    reverse(str, 7);
     cout << str << endl;
 
     return 0;
