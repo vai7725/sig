@@ -46,6 +46,19 @@ void reverse(char word[], int n)
     }
 }
 
+bool palindrome(char word[], int n)
+{
+    int st = 0, end = n - 1;
+
+    while (st <= end)
+    {
+        if (word[st++] != word[end--])
+            return false;
+    }
+
+    return true;
+}
+
 int main()
 {
     char str[] = "VaIbhAv";
@@ -59,6 +72,8 @@ int main()
 
     reverse(str, 7);
     cout << str << endl;
+
+    cout << palindrome(str, 7) << endl;
 
     return 0;
 }
