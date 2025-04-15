@@ -4,10 +4,23 @@ using namespace std;
 
 int main()
 {
-    string str;
-    getline(cin, str);
+    string str = "Vaibhav Prajapat";
 
-    cout << str;
+    cout << str << endl;
+
+    for (char i = 0; i < str.length(); i++)
+    {
+        cout << str[i] << "_";
+    }
+
+    cout << endl;
+
+    for (char ch : str)
+    {
+        cout << ch << "-";
+    }
+
+    cout << endl;
 
     return 0;
 }
